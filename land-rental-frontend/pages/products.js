@@ -46,7 +46,7 @@ export const Products = [
       id: 6,
       productName: 'Sweet Watermelon',
       Price: 6000,
-      productImage: '/Assets/product4.jpeg',
+      productImage: '/Assets/cutting.png',
       productDescription: 'Enjoy the sweetness .',
       category: 'Fruits',
     },

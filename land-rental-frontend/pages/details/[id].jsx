@@ -10,16 +10,7 @@ const Details = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    console.log("ID:", id); // Add this line
-  const fetchedProduct = Products.find(
-    (product) => product.id === parseInt(id, 10)
-  );
-
-    if (fetchedProduct) {
-      setProduct(fetchedProduct);
-    } else {
-      console.error(`Product with ID ${id} not found.`);
-    }
+    
   }, [id]);
 
   if (!product) {
@@ -27,23 +18,59 @@ const Details = () => {
   }
 
   return (
-    <div className="p-10">
-      <div className="flex flex-col items-center bg-gradient-to-b from-gray-200 to-gray-300 text-gray-700 w-80 max-w-500 mx-auto rounded-md shadow-md overflow-hidden transition-transform  ease-in-out duration-300 hover:transform hover:scale-102 hover:shadow-lg">
-        <img
-          src={product.productImage}
-          alt={product.productName}
-          className="w-full rounded-t-md overflow-hidden"
-        />
-        <div className="p-6 text-center">
-          <h1 className="text-3xl mb-2 font-bold text-gray-800">{product.productName}</h1>
-          <p className="text-2xl mb-2 text-blue-600">Price: ${product.Price}</p>
-          <p className="text-lg leading-6 text-gray-700">
-           <span className="font-bold">Description:</span>  {product.productDescription}
-          </p>
-          {/* Add more details as needed */}
-        </div>
-      </div>
+    
+ <div>
+<div className="flex h-screen">
+  <div className="w-1/3  p-20 flex flex-col">
+    <div>
+      <img
+          src={`http://localhost:7000/manager/getlandimage/${land.picture}`}
+          alt={land.landname}
+        className="object-cover w-full group-hover:scale-105 transition-all duration-300"
+      />
     </div>
+    
+    </div>
+  </div>
+  <div className="w-2/3 pt-24">
+    <h2 className="font-bold">iPhone 15 Valentine Special Combo</h2>
+    <div className="flex  gap-3 mt-2">
+      <button className="bg-gray-300 w-auto h-8 p-1">
+        Cash Discount Price: 124593৳ 107150৳
+      </button>
+      <button className="bg-gray-300 w-auto h-8 p-1">
+        Status: In Stock
+      </button>
+      <button className="bg-gray-300 w-auto h-8 p-1">
+        {" "}
+        Product Code: 0
+      </button>
+    </div>
+    <div className="mt-3">
+      <ul className="list-disc list-inside gap-1">
+        <li>Lorem ipsum dolor, sit amet consectetur </li>
+        <li>Lorem ipsum dolor, sit amet consectetur </li>
+        <li>Lorem ipsum dolor, sit amet consectetur </li>
+        <li>Lorem ipsum dolor, sit amet consectetur </li>
+        <li>Lorem ipsum dolor, sit amet consectetur </li>
+      </ul>
+    </div>
+    <div className="flex items-center space-x-4 mt-4">
+      <div className="flex items-center space-x-2  ">
+        <button className="px-3 py-1 bg-gray-200 rounded-md">-</button>
+        <span>1</span>
+        <button className="px-3 py-1 bg-gray-200 rounded-md">+</button>
+      </div>
+      <button className="px-4 py-2 bg-blue-500 text-white rounded-md">
+        Buy Now
+      </button>
+      <button className="px-4 py-2 bg-green-500 text-white rounded-md">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
   );
 };
 

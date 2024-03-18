@@ -1,9 +1,8 @@
-
 // Cart.js
 import React, { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import { ShopContext } from "../shop-context";
-
+import { Products } from "../products";
 import CartItem from "./CartItem";
 import Checkout from "../Checkout";
 
@@ -23,9 +22,11 @@ const Cart = () => {
   };
 
   const handleCheckout = () => {
+    // Implement any additional checkout logic if needed
+    // For simplicity, we'll just clear the cart in this example
     clearCart();
     setIsCheckoutOpen(false);
-    router.push("/confirmation");
+    router.push("/confirmation"); // Redirect to a confirmation page or any other desired route
   };
 
   const backToTheShopping = () => {
@@ -38,14 +39,11 @@ const Cart = () => {
         <h1 className="font-serif text-5xl">Your cart</h1>
       </div>
       <div className="cartItems">
-        {Object.keys(cartItems).map((productId) => (
-          <CartItem
-            key={productId}
-            data={cartItems[productId]}
-            quantity={cartItems[productId]}
-            onAddToCart={() => {}}
-          />
-        ))}
+        {Products.map((product) => {
+          if (cartItems[product.id] !== 0) {
+            return <CartItem data={product} key={product.id} />;
+          }
+        })}
       </div>
       <div className="checkout">
         <p>Total: {totalAmount} tk</p>
@@ -63,3 +61,9 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
+
+   

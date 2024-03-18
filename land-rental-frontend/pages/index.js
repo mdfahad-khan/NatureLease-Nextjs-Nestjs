@@ -9,6 +9,7 @@ import ShopContextProvider from './shop-context'
 import Service from './Website/Service'
 import News from './Website/News'
 import ShowLandPost from './Website/ShowLandPost'
+import Footer from './Website/Footer'
 // import Chat from './Chat'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +28,7 @@ export default function Home() {
 
     <Contact />
     <News />
+    <Footer />
     
     {/* <Youtube /> */}
     </div>

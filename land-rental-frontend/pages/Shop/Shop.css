@@ -11,7 +11,7 @@ li {
 
 body {
   font-family: "Arial", sans-serif;
-  background: #F1EFF0;
+  background: #FFFFFF
 }
 
 /* Center the entire content */
@@ -90,17 +90,29 @@ body {
 }
 
 /* Updated button styles */
-.addToCartBtn {
-  background-color: #36a089;
-  color: #fff;
+.addToCartBtn1 {
+  border:1px solid #36a089;
+  color: #36a089;
   width: 100%;
   padding: 12px;
-  border: none;
-  border-radius: 15px;
+ 
+  border-radius: 5px;
   cursor: pointer;
   margin-top: 3px;
   transition: background-color 0.3s ease-in-out;
 }
+.addToCartBtn {
+  background-color: #36a089;
+  color: #fff;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+
 .searchInput input {
   width: 400px;
   height: 40px;

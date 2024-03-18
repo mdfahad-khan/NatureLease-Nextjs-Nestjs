@@ -5,7 +5,7 @@ const Discount = () => {
   return (
     <div>
         <div
-        className="flex-shrink-0 w-full h-[80vh] bg-cover bg-center"
+        className="flex-shrink-0 w-full xl:h-[80vh] lg:h-[70vh] md:h-[60vh] sm:h-[50vh] h-[20vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${DisplayImage.src})` }}></div>
     </div>
   )

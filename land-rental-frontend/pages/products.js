@@ -7,7 +7,7 @@ export const Products = [
       productName: 'Self Propel Power Reapear',
       Price: 10000,
       productImage: '/Assets/walk.jpeg',
-      productDescription: 'Self propelled reaper is self propelled one used to harvest multiple crops like paddy, wheat. red gram, black gram, bengal gram and many crops.',
+      productDescription: 'Self propelled reaper ',
       category: 'Farm Equipment',
     },
     {
@@ -31,7 +31,7 @@ export const Products = [
       productName: 'Water Pump Set Diesel',
       Price: 6000,
       productImage: '/Assets/pump.png',
-      productDescription: 'A water pump is a machine that is used to transfer water from one location to another. ',
+      productDescription: 'A water pump is a machine that ',
       category: 'General',
     },
     {

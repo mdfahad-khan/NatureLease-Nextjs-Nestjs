@@ -10,6 +10,8 @@ import Service from './Website/Service'
 import News from './Website/News'
 import ShowLandPost from './Website/ShowLandPost'
 import Footer from './Website/Footer'
+import AdminDashboard1 from './Admin/AdminDashborad1'
+
 // import Chat from './Chat'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +25,8 @@ export default function Home() {
     <Discount />
     <ShowLandPost />
     <Shop />
+    {/* <AdminDashboard1 /> */}
+ 
     <About />
     <Service />
 

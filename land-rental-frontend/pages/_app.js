@@ -5,7 +5,9 @@ import "../pages/Shop/Shop.css"
 import ShopContextProvider from './shop-context';
 import { AuthProvider } from './authcontext';
 
+
 import "./Cart/cart.css"
+import { ThemeProvider } from './Website/ThemeProvider';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -25,16 +27,21 @@ export default function App({ Component, pageProps }) {
   const editProduct = router.pathname === '/Manager/EditProduct';
   const addland = router.pathname === '/Manager/AddLand';
   const editland = router.pathname === '/Manager/AddLandPost';
-  
 
+  
+ 
 
   return (
     <ShopContextProvider>
       {!isLoginPage && !isSignUpPage && !isManager && !isManagerDashboard && !isLandPost && !isEmail && !isUserNav && !isSeller && !isEditProfile && !isSellerNav&& !isSel &&!isSellerProduct&& !addProduct&&    !editProduct&& !addland&&  !editland&&        <Navbar />}
 
-      <AuthProvider>
+     
+
+    <AuthProvider>
       <Component {...pageProps} />
     </AuthProvider>
+   
+   
       
     </ShopContextProvider>
   );

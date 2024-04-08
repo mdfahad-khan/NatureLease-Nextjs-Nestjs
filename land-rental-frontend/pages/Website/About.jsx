@@ -11,12 +11,12 @@ const About = () => {
       <div
       
         
-        className="w-[340px] sm:w-[620px] md:w-[400px] lg:w-[550px] xl:w-[600px]  2xl:w-[800px]  h-auto xl:h-[500px]  ml-[30px] pl-2 xl:mt-2"
+        className="w-[340px] sm:w-[620px] md:w-[400px] lg:w-[550px] xl:w-[600px]   2xl:ml-[300px]  h-auto xl:h-[500px]  ml-[50px] pl-2 xl:mt-2"
       >
         <h1
          
           className="text-[20px] xl:text-[40px] 
-          2xl:text-[45px] sm:text-[23px] md:text-[27px] lg:text-[32px] text-center mt-2 xl:mt-20 duration-100 font-bold mb-2 text-[#3a87e0] "
+          2xl:text-[40px] sm:text-[23px] md:text-[27px] lg:text-[32px] text-center mt-2 xl:mt-20 duration-100 font-bold mb-2 text-[#3a87e0] "
         >
           About Us
         </h1>
@@ -24,10 +24,10 @@ const About = () => {
         
           className="text-black duration-100 text-justify"
         >
-          <p className="text-[13px] sm:text[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[32px] md:mb-3 sm:mb-1 font-bold md:mt-2 sm:mt-1">
-            🚀 Elevate Your Digital Presence with farseIT! 🌐
+          <p className="text-[13px] sm:text[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] md:mb-3 sm:mb-1 font-bold md:mt-2 sm:mt-1">
+            {/* 🚀 Elevate Your Digital Presence with farseIT! 🌐 */}
           </p>
-          <p className="text-[11px] sm:text-[13px] md:text-[14] lg:text-[16px] xl:text-[17px] 2xl:text-[23px]">
+          <p className="text-[11px] sm:text-[13px] md:text-[14] lg:text-[16px] xl:text-[17px] 2xl:text-[20px]">
           Welcome to FarmConnect, your premier destination for all things
             agriculture and farming. Our commitment is to elevate your farming
             experience, transforming it into a journey of growth and abundance.

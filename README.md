@@ -1,4 +1,15 @@
 
+<h1 align="center">Hi, This is my Nature Lease Website</h1> 
+<!-- <h1 align="center">Here is the live Link : <a href='https://aiub-campus-life-2a49.vercel.app/' target='blank'>AIUB CAMPUS LIFE</a></h1>  -->
+<div align="center"> 
+  <img src="https://github.com/mdfahad-khan/mdfahad-khan/blob/main/fahad.png"> 
+</div>
+
+<h2>Project Description</h2>
+<p align="justify">Experience a dynamic online marketplace powered by TypeScript, Tailwind CSS, Nest.js, and Next.js. Seamlessly connecting buyers and sellers of farm-related products and prime land parcels. With distinct user roles including Admin, Manager, Seller, and User, the platform offers a streamlined experience. Featuring a captivating landing page showcasing farm equipment and enticing land listings. Dive into the demo via the project link to witness its functionality firsthand</p> 
+
+<img align="right" alt="coder" width="400" src="https://github.com/mdfahad-khan/mdfahad-khan/blob/main/coder.gif">
+
 <h2>Languages and Tools</h2>
 
 * [![NestJS][NestJS]][NestJS-url]
@@ -80,4 +91,16 @@
   </code>
   </pre>
   Your Next.js and Nest.js application with Tailwind CSS and PostgreSQL should now be running locally!
+</p>
+<h3>Connect with Me</h3>
+<p align="left"> 
+  <a href="https://linkedin.com/in/www.linkedin.com/in/md-fahad-khan" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+  </a> 
+  <a href="https://fb.com/https://www.facebook.com/md.fahadkhan.9889/" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="30" width="40" />
+  </a> 
+  <a href="https://www.leetcode.com/https://leetcode.com/evanahmedfahad/" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="LeetCode" height="30" width="40" />
+  </a> 
 </p>

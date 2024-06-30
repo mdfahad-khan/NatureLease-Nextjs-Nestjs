@@ -2,7 +2,7 @@
 <h1 align="center">Hi, This is my Nature Lease Website</h1> 
 <!-- <h1 align="center">Here is the live Link : <a href='https://aiub-campus-life-2a49.vercel.app/' target='blank'>AIUB CAMPUS LIFE</a></h1>  -->
 <div align="center"> 
-  <img src="https://github.com/mdfahad-khan/mdfahad-khan/blob/main/fahad.png"> 
+<img align="center" width="100%"  src="https://github.com/mdfahad-khan/NatureLease-Nextjs-Nestjs/blob/main/natureLease" alt="Ecommerce MERN GIF"> 
 </div>
 
 <h2>Project Description</h2>

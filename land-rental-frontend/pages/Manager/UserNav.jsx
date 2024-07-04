@@ -29,7 +29,6 @@ const UserNav = () => {
   const userobj = user;
   const [isDropdown, setDropdown] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  
 
   const toggleDropdown = (event) => {
     event.stopPropagation();
@@ -151,7 +150,7 @@ const UserNav = () => {
       )}
       <SessionCheck></SessionCheck>
 
-      <div className="grid grid-cols-12 gap-3 pr-8 pl-8">
+      <div className="grid grid-cols-12 gap-3 ">
         {/* Header */}
         <header className="col-span-12 bg-gradient-to-r from-[#2c3e50] to-[#34495e] text-white p-4 flex justify-between items-center  shadow-md">
           <nav className="flex space-x-4 ">

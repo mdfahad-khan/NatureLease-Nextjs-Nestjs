@@ -1,8 +1,8 @@
 // LandPostDetails.jsx
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import axios from 'axios';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
+import Link from "next/link";
 
 const LandPostDetails = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const LandPostDetails = () => {
           `http://localhost:7000/manager/single/${id}`,
           {
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
           }
         );
@@ -24,10 +24,10 @@ const LandPostDetails = () => {
         if (response.data) {
           setLand(response.data);
         } else {
-          console.log('No details available for the land post');
+          console.log("No details available for the land post");
         }
       } catch (error) {
-        console.error('Failed:', error);
+        console.error("Failed:", error);
       }
     };
 
@@ -57,7 +57,11 @@ const LandPostDetails = () => {
           <p className="text-lg text-gray-700 mb-1">{land.location}</p>
           <p className="text-lg text-gray-700 mb-1">{land.description}</p>
           {/* Add more details as needed */}
-          <Link href="/ShowLandPost"><button className="bg-green-700 text-white align-middle px-2 py-2 rounded-md hover:bg-blue-600 transition duration-300">Back To LandPost</button></Link>
+          <Link href="/">
+            <button className="bg-green-700 text-white align-middle px-2 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+              Back To LandPost
+            </button>
+          </Link>
         </div>
       </div>
     </div>

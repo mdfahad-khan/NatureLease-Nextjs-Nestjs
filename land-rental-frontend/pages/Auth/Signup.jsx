@@ -117,14 +117,11 @@ const Signup = () => {
         isValid = false;
       }
 
-      
       const blacklistedDomains = ["example.net", "example.org"]; // Adjust as needed
       if (blacklistedDomains.includes(formData.email.trim().split("@")[1])) {
         newFormErrors.email = "Email from this domain is not allowed";
         isValid = false;
       }
-
-     
     }
 
     if (formData.password.trim() === "") {
@@ -277,239 +274,244 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center h-[110vh] bg-gradient-to-r from-[#a1b0af] to-[#beebe9]">
-      <div className="max-h-[110vh] rounded shadow-md">
-        <Image
-          src="/Assets/signup1.png" // Adjust the path based on your project structure
-          alt="Manager"
-          className="rounded rounded-l-md"
-          width={480} // Set your desired width
-          height={500} // Set your desired height
-        />
-      </div>
-      <div className="bg-[#ffffff] px-12 rounded shadow-md w-full max-w-lg max-h-[110vh]">
-        <h2 className="text-3xl font-bold mb-3 text-center text-gray-800">
-          Sign Up
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-1">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label
-                htmlFor="firstName"
-                className="block text-sm font-semibold text-gray-600"
-              >
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="w-full p-1 border rounded-md focus:outline-none"
-              />
-              {formErrors.firstName && (
-                <p className="text-red-500 text-xs mt-1">
-                  {formErrors.firstName}
-                </p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="lastName"
-                className="block text-sm font-semibold text-gray-600"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="w-full p-1 border rounded-md focus:outline-none"
-              />
-              {formErrors.lastName && (
-                <p className="text-red-500 text-xs mt-1">
-                  {formErrors.lastName}
-                </p>
-              )}
-            </div>
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-gray-600"
-            >
-              Email
-            </label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-1 border rounded-md focus:outline-none"
-            />
-            {(formErrors.email || emailError) && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.email || emailError}
-              </p>
-            )}
-            {formErrors.email && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>
-            )}
-          </div>
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-semibold text-gray-600"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={(e) => {
-                handleChange(e);
-                handlePasswordStrength();
-              }}
-              className="w-full p-1 border rounded-md focus:outline-none"
-            />
-            {formErrors.password && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.password}</p>
-            )}
-            {/* Display password strength indicator */}
-            {/* Add your logic to display password strength here */}
-          </div>
-          <div>
-            <label
-              htmlFor="confirmPassword"
-              className="block text-sm font-semibold text-gray-600"
-            >
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full p-1 border rounded-md focus:outline-none"
-            />
-            {formErrors.confirmPassword && (
-              <p className="text-red-500 text-xs mt-1">
-                {formErrors.confirmPassword}
-              </p>
-            )}
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label
-                htmlFor="country"
-                className="block text-sm font-semibold text-gray-600"
-              >
-                Country
-              </label>
-              <select
-                id="country"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                className="w-full p-1 border rounded-md focus:outline-none"
-              >
-                <option value="" disabled>
-                  Select a Country
-                </option>
-                {countries.map((country, index) => (
-                  <option key={index} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-              {formErrors.country && (
-                <p className="text-red-500 text-xs mt-1">
-                  {formErrors.country}
-                </p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="phoneNumber"
-                className="block text-sm font-semibold text-gray-600"
-              >
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phoneNumber"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                className="w-full p-1 border rounded-md focus:outline-none"
-              />
-              {formErrors.phoneNumber && (
-                <p className="text-red-500 text-xs mt-1">
-                  {formErrors.phoneNumber}
-                </p>
-              )}
-            </div>
-          </div>
-          <div>
-            <label
-              htmlFor="dateOfBirth"
-              className="block text-sm font-semibold text-gray-600"
-            >
-              Date of Birth
-            </label>
-            <input
-              type="date"
-              id="dateOfBirth"
-              name="dateOfBirth"
-              value={formData.dateOfBirth}
-              onChange={handleChange}
-              className="w-full p-1 border rounded-md focus:outline-none"
-            />
-            {formErrors.dateOfBirth && (
-              <p className="text-red-500 text-xs mt-1">
-                {formErrors.dateOfBirth}
-              </p>
-            )}
-          </div>
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              id="agreeToTerms"
-              name="agreeToTerms"
-              checked={formData.agreeToTerms}
-              onChange={handleChange}
-              className="text-blue-500"
-            />
-            <label htmlFor="agreeToTerms" className="text-sm text-gray-600">
-              I agree to the{" "}
-              <a href="/terms" className="text-blue-500">
-                terms and conditions
-              </a>
-            </label>
-          </div>
-          {formErrors.agreeToTerms && (
-            <p className="text-red-500 text-xs mt-1">
-              {formErrors.agreeToTerms}
-            </p>
-          )}
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300 w-full mt-4"
-          >
+      <div className="flex">
+        <div className="max-h-[110vh] bg-[#ffffff]  ">
+          <Image
+            src="/Assets/signup1.png" // Adjust the path based on your project structure
+            alt="Manager"
+            className=""
+            width={480} // Set your desired width
+            height={500} // Set your desired height
+          />
+        </div>
+        <div className="bg-[#ffffff] px-12   w-full max-w-lg max-h-[110vh]">
+          <h2 className="text-3xl font-bold mb-3 text-center text-[#006266]">
             Sign Up
-          </button>
-        </form>
-        <Link href="/Auth/Login">
-          <h6 className="text-blue-500 text-center ">
-            Already have an account? Login here.
-          </h6>
-        </Link>
+          </h2>
+          <form onSubmit={handleSubmit} className="space-y-1">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm font-semibold text-gray-600"
+                >
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full p-1 border rounded-md focus:outline-none"
+                />
+                {formErrors.firstName && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.firstName}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-semibold text-gray-600"
+                >
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full p-1 border rounded-md focus:outline-none"
+                />
+                {formErrors.lastName && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.lastName}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-600"
+              >
+                Email
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-1 border rounded-md focus:outline-none"
+              />
+              {(formErrors.email || emailError) && (
+                <p className="text-red-500 text-sm mt-1">
+                  {formErrors.email || emailError}
+                </p>
+              )}
+              {formErrors.email && (
+                <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>
+              )}
+            </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-gray-600"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={(e) => {
+                  handleChange(e);
+                  handlePasswordStrength();
+                }}
+                className="w-full p-1 border rounded-md focus:outline-none"
+              />
+              {formErrors.password && (
+                <p className="text-red-500 text-xs mt-1">
+                  {formErrors.password}
+                </p>
+              )}
+              {/* Display password strength indicator */}
+              {/* Add your logic to display password strength here */}
+            </div>
+            <div>
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-semibold text-gray-600"
+              >
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full p-1 border rounded-md focus:outline-none"
+              />
+              {formErrors.confirmPassword && (
+                <p className="text-red-500 text-xs mt-1">
+                  {formErrors.confirmPassword}
+                </p>
+              )}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="country"
+                  className="block text-sm font-semibold text-gray-600"
+                >
+                  Country
+                </label>
+                <select
+                  id="country"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  className="w-full p-1 border rounded-md focus:outline-none"
+                >
+                  <option value="" disabled>
+                    Select a Country
+                  </option>
+                  {countries.map((country, index) => (
+                    <option key={index} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+                {formErrors.country && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.country}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label
+                  htmlFor="phoneNumber"
+                  className="block text-sm font-semibold text-gray-600"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className="w-full p-1 border rounded-md focus:outline-none"
+                />
+                {formErrors.phoneNumber && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {formErrors.phoneNumber}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="dateOfBirth"
+                className="block text-sm font-semibold text-gray-600"
+              >
+                Date of Birth
+              </label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                value={formData.dateOfBirth}
+                onChange={handleChange}
+                className="w-full p-1 border rounded-md focus:outline-none"
+              />
+              {formErrors.dateOfBirth && (
+                <p className="text-red-500 text-xs mt-1">
+                  {formErrors.dateOfBirth}
+                </p>
+              )}
+            </div>
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="agreeToTerms"
+                name="agreeToTerms"
+                checked={formData.agreeToTerms}
+                onChange={handleChange}
+                className="text-blue-500"
+              />
+              <label htmlFor="agreeToTerms" className="text-sm text-gray-600">
+                I agree to the{" "}
+                <a href="/terms" className="text-[#006266]">
+                  terms and conditions
+                </a>
+              </label>
+            </div>
+            {formErrors.agreeToTerms && (
+              <p className="text-red-500 text-xs mt-1">
+                {formErrors.agreeToTerms}
+              </p>
+            )}
+            <button
+              type="submit"
+              className="bg-[#006266] text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300 w-full mt-4"
+            >
+              Sign Up
+            </button>
+          </form>
+          <Link href="/Auth/Login">
+            <h6 className="text-[#006266] text-center ">
+              Already have an account?
+              <span className="font-semibold"> Login here.</span>
+            </h6>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -3,32 +3,60 @@ import { ShopContext } from "../shop-context";
 import Image from "next/image";
 
 const CartItem = (props) => {
-  const { id, productName, Price, productImage } = props.data;
+  const { id, productName, productDescription, Price, productImage } =
+    props.data;
   console.log(props.data);
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
-    useContext(ShopContext); 
-  
+    useContext(ShopContext);
+
   return (
-    <div className="cartItem bg-white w-56 h-20 flex items-center shadow-md rounded-sm my-8 mx-4 p-2">
-      <Image src={productImage} className="w-48 ml-4" alt={productName}width={200} height={200} />
-      <div className="description flex-1 text-lg ml-8">
-        <p className="font-bold">{productName}</p>
-        <p className="mt-2 mb-2">{Price} tk</p>
-        <div className="countHandler flex items-center">
-          <button onClick={() => removeFromCart(id)} className="px-2 py-1 border">
-            -
-          </button>
-          <input
-            value={cartItems[id]}
-            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-            className="w-12 text-center font-bold"
-          />
-          <button onClick={() => addToCart(id)} className="px-2 py-1 border">
-            +
-          </button>
-        </div>
-      </div>
-    </div>
+    <table className="w-full">
+      <tbody>
+        <tr className="rounded-sm shadow-md my-2 bg-white border border-b-green-600">
+          <td className="p-2 w-1/5">
+            <Image
+              src={productImage}
+              alt={productName}
+              width={80}
+              height={80}
+              className="rounded"
+            />
+          </td>
+          <td className="p-4 text-md font-bold w-1/5">
+            <p>{productName}</p>
+          </td>
+          <td className="p-4 text-[14px]  w-1/5">
+            <p>{productDescription}</p>
+          </td>
+          <td className="p-4 text-lg font-bold text-green-600 w-1/5">
+            <p>{Price} tk</p>
+          </td>
+          <td className="p-4 w-1/5">
+            <div className="flex items-center">
+              <button
+                onClick={() => removeFromCart(id)}
+                className="px-2 py-1 border"
+              >
+                -
+              </button>
+              <input
+                value={cartItems[id]}
+                onChange={(e) =>
+                  updateCartItemCount(Number(e.target.value), id)
+                }
+                className="w-12 text-center font-bold mx-2"
+              />
+              <button
+                onClick={() => addToCart(id)}
+                className="px-2 py-1 border"
+              >
+                +
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 };
 

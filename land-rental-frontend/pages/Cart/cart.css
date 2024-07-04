@@ -1,4 +1,4 @@
-.cart {
+/* .cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +6,7 @@
 }
 
 .cartItem {
-  width: 700px;
+  width: 900px;
   height: 250px;
   display: flex;
   align-items: center;
@@ -24,14 +24,14 @@
   width: 100%;
   font-size: 30px;
   margin-left: 30px;
-}
+} */
 
-.countHandler input {
+/* .countHandler input {
   width: 40px;
   text-align: center;
   font-weight: bolder;
-}
-
+} */
+/* 
 .checkout button {
   width: 150px;
   height: 50px;
@@ -41,4 +41,4 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
-}
+} */
